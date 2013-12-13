@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/cam_shutter_off"
+        style="@style/btnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:onClick="clickshutteroff"
+        android:text="Camera Click Shutter OFF"
+         />
+
+    <Button
+        android:id="@+id/cam_focus_on"
+        style="@style/btnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cam_focus_off"
+        android:layout_below="@+id/cam_focus_off"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="focusshutteron"
+        android:text="Camera Focus Shutter ON"
+         />
+
+    <Button
+        android:id="@+id/cam_shutter_on"
+        style="@style/btnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cam_shutter_off"
+        android:layout_below="@+id/cam_shutter_off"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="clickshutteron"
+        android:text="Camera Click Shutter ON"
+         />
+
+    <Button
+        android:id="@+id/cam_focus_off"
+        style="@style/btnStyle"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cam_shutter_on"
+        android:layout_below="@+id/cam_shutter_on"
+        android:gravity="center"
+        android:onClick="focusshutteroff"
+        android:text="Camera Focus Shutter OFF"
+         />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cam_focus_on"
+        android:layout_alignRight="@+id/cam_focus_on"
+        android:layout_below="@+id/cam_focus_on"
+        android:layout_marginTop="34dp"
+        android:text="Only for Micromax A111 Canvas Doodle"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
