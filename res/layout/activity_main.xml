@@ -68,7 +68,7 @@
         android:layout_alignRight="@+id/cam_focus_on"
         android:layout_below="@+id/cam_focus_on"
         android:layout_marginTop="34dp"
-        android:text="Only for Micromax A111 Canvas Doodle"
+        android:text="Only for Micromax A111 Canvas Doodle\nBy Aditya K G"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/white" />

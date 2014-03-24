@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import com.adityak74.camerashutteroff.R;
 import com.stericson.RootTools.RootTools;
+import com.stericson.RootTools.execution.Shell;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -41,7 +43,7 @@ public class MainActivity extends Activity {
 	       
 	       if(cam_shutter.exists() && focus_shutter.exists())
 	       {
-	    	   Toast.makeText(getApplicationContext(), "Ogg Files exist", Toast.LENGTH_SHORT).show();
+	    	   Toast.makeText(getApplicationContext(), "Shutter and Focus State : ON", Toast.LENGTH_SHORT).show();
 	    	   camfocusoff.setClickable(true);
 	    	   camshutteroff.setClickable(true);
 	    	   camfocuson.setClickable(false);
@@ -49,7 +51,7 @@ public class MainActivity extends Activity {
 	       }
 	       else if(cam_shutter_bak.exists() && focus_shutter_bak.exists())
 	       {
-	    	   Toast.makeText(getApplicationContext(), "Bak Files exist", Toast.LENGTH_SHORT).show();
+	    	   Toast.makeText(getApplicationContext(), "Shutter and Focus State : OFF", Toast.LENGTH_SHORT).show();
 	    	   camfocusoff.setClickable(false);
 	    	   camshutteroff.setClickable(false);
 	    	   camfocuson.setClickable(true);
@@ -57,13 +59,14 @@ public class MainActivity extends Activity {
 	       }
 	       else if(cam_shutter_bak.exists() || focus_shutter_bak.exists())
 	       {
-	    	   Toast.makeText(getApplicationContext(), "(one)Bak File exist", Toast.LENGTH_SHORT).show();
+	    	   
 	    	   if(cam_shutter_bak.exists())
 	    	   {
 	    		   camfocusoff.setClickable(true);
 		    	   camshutteroff.setClickable(false);
 		    	   camfocuson.setClickable(false);
 		    	   camshutteron.setClickable(true);
+		    	   Toast.makeText(getApplicationContext(), "Shutter ON Focus OFF", Toast.LENGTH_SHORT).show();
 	    	   }
 	    	   if(focus_shutter_bak.exists())
 	    	   {
@@ -71,6 +74,7 @@ public class MainActivity extends Activity {
 		    	   camshutteroff.setClickable(true);
 		    	   camfocuson.setClickable(true);
 		    	   camshutteron.setClickable(false);
+		    	   Toast.makeText(getApplicationContext(), "Shutter OFF Focus ON", Toast.LENGTH_SHORT).show();
 	    	   }
 	       }
 	       
