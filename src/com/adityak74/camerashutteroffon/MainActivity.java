@@ -3,11 +3,8 @@ package com.adityak74.camerashutteroffon;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.IOException;
-
 import com.adityak74.camerashutteroff.R;
 import com.stericson.RootTools.RootTools;
-import com.stericson.RootTools.execution.Shell;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
